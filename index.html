@@ -1,14 +1,372 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matheus Henry — Dev & AppSec</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./img/icon.png">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./main.js" defer></script>
-    <title>Matheus Henry</title>
 </head>
 <body>
-    
+    <!-- ===== CURSOR ===== -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">MH<span class="accent">.</span></a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav_about">Sobre</a>
+                <a href="#goals" data-i18n="nav_goals">Objetivos</a>
+                <a href="#experience" data-i18n="nav_exp">Experiência</a>
+                <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+                <a href="#contact" data-i18n="nav_contact">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language toggle -->
+                <button class="lang-btn" id="langToggle" aria-label="Toggle language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-label" id="langLabel">EN</span>
+                </button>
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+            <p class="hero-greeting reveal" data-i18n="hero_greeting">Olá, mundo</p>
+            <h1 class="hero-name reveal">Matheus Henry<span class="accent">.</span></h1>
+            <div class="hero-typed-wrap reveal">
+                <span class="typed-prefix" data-i18n="hero_prefix">Futuro </span>
+                <span class="typed-text" id="typedText"></span>
+                <span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-sub reveal" data-i18n="hero_sub">
+                Estudante de DS no SENAI · 17 anos · São Paulo, BR
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#contact" class="btn-primary" data-i18n="hero_cta_contact">Entre em contato</a>
+                <a href="#about" class="btn-ghost" data-i18n="hero_cta_about">Saiba mais</a>
+            </div>
+        </div>
+        <div class="hero-badge reveal">
+            <div class="badge-ring">
+                <span class="badge-code">&lt;/&gt;</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="about_label">// sobre mim</span></div>
+            <h2 class="section-title reveal" data-i18n="about_title">Quem sou eu</h2>
+
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="about-avatar">
+                        <div class="avatar-ring">
+                            <span class="avatar-initials">MH</span>
+                        </div>
+                        <div class="status-dot"></div>
+                    </div>
+                    <div class="about-info">
+                        <p class="about-name">Matheus Henry dos Santos</p>
+                        <p class="about-role" data-i18n="about_role">Dev Fullstack & Aspirante AppSec</p>
+                        <p class="about-location"><i class="fa-solid fa-location-dot"></i> São Paulo, BR</p>
+                    </div>
+                </div>
+
+                <div class="about-text reveal">
+                    <p data-i18n="about_p1">
+                        Tenho 17 anos e sou estudante do ensino médio, cursando simultaneamente o técnico em
+                        <strong>Desenvolvimento de Sistemas</strong> pelo SENAI. Desde cedo me apaixonei por tecnologia
+                        e hoje meu foco é me tornar um desenvolvedor completo, com interesse especial em
+                        <strong>Application Security (AppSec)</strong>.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Sou <strong>fullstack</strong> e me adapto bem a diversas áreas da tecnologia — do front-end
+                        ao back-end, passando por segurança. Minha maior motivação é aprender continuamente e
+                        transformar conhecimento em soluções reais.
+                    </p>
+                    <p data-i18n="about_p3">
+                        Além da programação, invisto no inglês há mais de 1 ano pelo curso online
+                        <strong>Wisard</strong>
+                        e continuo evoluindo, pois quero trabalhar fora do país no futuro.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">HTML/CSS/JavaScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">AppSec</span>
+                        <span class="tag">Inglês</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOALS ===== -->
+    <section class="section goals" id="goals">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="goals_label">// objetivos</span></div>
+            <h2 class="section-title reveal" data-i18n="goals_title">Para onde estou indo</h2>
+
+            <div class="goals-grid">
+
+                <div class="goal-card reveal">
+                    <div class="goal-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 data-i18n="goal1_title">Faculdade de Ciência da Computação</h3>
+                    <p data-i18n="goal1_desc">Ingressar no curso de Ciência da Computação no próximo ano, aprofundando a
+                        base teórica e prática para uma carreira sólida em tecnologia.</p>
+                    <span class="goal-tag" data-i18n="goal1_tag">2026</span>
+                </div>
+
+                <div class="goal-card reveal">
+                    <div class="goal-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 data-i18n="goal2_title">Primeiro Estágio em TI</h3>
+                    <p data-i18n="goal2_desc">Conquistar um estágio na área de tecnologia para colocar em prática os
+                        conhecimentos adquiridos e ganhar experiência profissional real.</p>
+                    <span class="goal-tag" data-i18n="goal2_tag">Em breve</span>
+                </div>
+
+                <div class="goal-card reveal">
+                    <div class="goal-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 data-i18n="goal3_title">Carreira em Dev & AppSec</h3>
+                    <p data-i18n="goal3_desc">Consolidar expertise como desenvolvedor fullstack com especialização em
+                        segurança de aplicações, atuando na proteção e construção de sistemas robustos.</p>
+                    <span class="goal-tag" data-i18n="goal3_tag">Longo prazo</span>
+                </div>
+
+                <div class="goal-card reveal">
+                    <div class="goal-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3 data-i18n="goal4_title">Trabalhar no Exterior</h3>
+                    <p data-i18n="goal4_desc">Expandir horizontes profissionais atuando fora do Brasil, aproveitando o
+                        domínio do inglês e as oportunidades do mercado internacional de tecnologia.</p>
+                    <span class="goal-tag" data-i18n="goal4_tag">Futuro</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="exp_label">// experiência</span></div>
+            <h2 class="section-title reveal" data-i18n="exp_title">Minha trajetória</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-badge current" data-i18n="exp_badge_current">Atual</span>
+                            <span class="timeline-period" data-i18n="exp_senai_period">2024 – presente</span>
+                        </div>
+                        <h3 data-i18n="exp_senai_title">Técnico em Desenvolvimento de Sistemas — SENAI</h3>
+                        <p data-i18n="exp_senai_desc">Formação técnica com foco em programação, desenvolvimento web,
+                            banco de dados e metodologias ágeis. Aprendizado prático e teórico com projetos reais.</p>
+                        <div class="timeline-tags">
+                            <span>Programação</span><span>Web Dev</span><span>Banco de Dados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot transition-dot"></div>
+                    <div class="timeline-body transition-body">
+                        <div class="timeline-header">
+                            <span class="timeline-badge transition" data-i18n="exp_badge_transition">Transição</span>
+                        </div>
+                        <h3 data-i18n="exp_trans_title">↗ Mudança de carreira para Tecnologia</h3>
+                        <p data-i18n="exp_trans_desc">Decisão estratégica de redirecionar a carreira para a área de TI,
+                            investindo em educação técnica, projetos pessoais e desenvolvimento de habilidades digitais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot past-dot"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-badge past" data-i18n="exp_badge_past">Anterior</span>
+                            <span class="timeline-period" data-i18n="exp_buffet_period">2023 – 2024</span>
+                        </div>
+                        <h3 data-i18n="exp_buffet_title">Auxiliar de Serviços — Buffet</h3>
+                        <p data-i18n="exp_buffet_desc">Atuação em eventos gastronômicos, desenvolvendo habilidades de
+                            trabalho em equipe, responsabilidade, comunicação e gestão de tempo sob pressão.</p>
+                        <div class="timeline-tags">
+                            <span>Trabalho em equipe</span><span>Comunicação</span><span>Gestão de tempo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot past-dot"></div>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-badge past" data-i18n="exp_badge_past">Anterior</span>
+                            <span class="timeline-period" data-i18n="exp_casa_period">2022 – 2023</span>
+                        </div>
+                        <h3 data-i18n="exp_casa_title">Auxiliar — Casa do Norte</h3>
+                        <p data-i18n="exp_casa_desc">Experiência no atendimento ao cliente e operações internas,
+                            fortalecendo proatividade, organização e capacidade de adaptação em ambientes dinâmicos.</p>
+                        <div class="timeline-tags">
+                            <span>Atendimento</span><span>Organização</span><span>Proatividade</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="skills_label">// habilidades</span></div>
+            <h2 class="section-title reveal" data-i18n="skills_title">O que eu trago</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h4 data-i18n="sk1_title">Comunicação</h4>
+                    <p data-i18n="sk1_desc">Clareza ao transmitir ideias, seja em apresentações, reuniões ou
+                        documentação técnica.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-users"></i></div>
+                    <h4 data-i18n="sk2_title">Trabalho em Equipe</h4>
+                    <p data-i18n="sk2_desc">Colaboração efetiva em projetos coletivos, respeitando diferentes
+                        perspectivas e contribuindo ativamente.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h4 data-i18n="sk3_title">Aprendizado Rápido</h4>
+                    <p data-i18n="sk3_desc">Capacidade de absorver novas tecnologias e conceitos com agilidade e
+                        curiosidade constante.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <h4 data-i18n="sk4_title">Adaptabilidade</h4>
+                    <p data-i18n="sk4_desc">Flexibilidade para se ajustar a novos ambientes, ferramentas e desafios com
+                        naturalidade.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h4 data-i18n="sk5_title">Resolução de Problemas</h4>
+                    <p data-i18n="sk5_desc">Abordagem analítica e criativa para identificar e solucionar problemas
+                        técnicos e práticos.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h4 data-i18n="sk6_title">Gestão de Tempo</h4>
+                    <p data-i18n="sk6_desc">Organização de prioridades e cumprimento de prazos mesmo em situações de
+                        múltiplas demandas.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h4 data-i18n="sk7_title">Proatividade</h4>
+                    <p data-i18n="sk7_desc">Iniciativa para antecipar necessidades, propor melhorias e agir sem esperar
+                        ser solicitado.</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-language"></i></div>
+                    <h4 data-i18n="sk8_title">Inglês</h4>
+                    <p data-i18n="sk8_desc">Nível intermediário e em evolução contínua pelo curso Wisard. Leitura
+                        técnica fluente.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="contact_label">// contato</span></div>
+            <h2 class="section-title reveal" data-i18n="contact_title">Vamos conversar?</h2>
+            <p class="contact-sub reveal" data-i18n="contact_sub">
+                Estou aberto a oportunidades de estágio, projetos colaborativos e trocas de conhecimento.
+                Pode me chamar!
+            </p>
+
+            <div class="contact-cards reveal">
+
+                <a href="https://wa.me/5511983230652?text=Ol%C3%A1%20Matheus%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20com%20voc%C3%AA"
+                    target="_blank" rel="noopener" class="contact-card whatsapp">
+                    <div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">WhatsApp</span>
+                        <span class="contact-card-value">+55 (11) 98323-0652</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+                <a href="mailto:09matheushenry@gmail.com" class="contact-card email">
+                    <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">E-mail</span>
+                        <span class="contact-card-value">09matheushenry@gmail.com</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/matheus-henry-dos-santos-6092aa2a9/" target="_blank" rel="noopener"
+                    class="contact-card linkedin">
+                    <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-value">matheus-henry-dos-santos</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-name">Matheus Henry<span class="accent">.</span></span>
+            <span class="footer-copy" data-i18n="footer_copy">Provérbios 24, versículo 16 · 2025</span>
+        </div>
+    </footer>
 </body>
 </html>
