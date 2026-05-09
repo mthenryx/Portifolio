@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +10,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
     <link rel="icon" type="image/png" href="./img/icon.png">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./main.js" defer></script>
 </head>
+
 <body>
     <!-- ===== CURSOR ===== -->
     <div class="cursor" id="cursor"></div>
@@ -35,6 +39,7 @@
                 <a href="#goals" data-i18n="nav_goals">Objetivos</a>
                 <a href="#experience" data-i18n="nav_exp">Experiência</a>
                 <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+                <a href="#projects"   data-i18n="nav_projects">Projetos</a>
                 <a href="#contact" data-i18n="nav_contact">Contato</a>
             </nav>
 
@@ -316,6 +321,118 @@
         </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-label reveal"><span data-i18n="proj_label">// projetos</span></div>
+            <div class="projects-header reveal">
+                <h2 class="section-title" data-i18n="proj_title">O que eu construí</h2>
+                <a href="https://github.com/mthenryx" target="_blank" rel="noopener" class="github-link">
+                    <i class="fa-brands fa-github"></i>
+                    <span data-i18n="proj_github">Ver GitHub</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="project-links">
+                            <a href="https://mthenryx.github.io/Pagina-web-conselhos/" target="_blank" rel="noopener"
+                                title="Demo ao vivo" aria-label="Demo ao vivo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 data-i18n="proj1_title">Página de Conselhos</h3>
+                    <p data-i18n="proj1_desc">Aplicação web integrada a uma API de conselhos, com três páginas — uma
+                        estática e duas dinâmicas que consomem e exibem dados da API. Foco em integração com APIs e
+                        front-end.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API REST</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mthenryx/API-whatsapp" target="_blank" rel="noopener"
+                                title="Ver código" aria-label="Ver código">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 data-i18n="proj2_title">API WhatsApp Simulator</h3>
+                    <p data-i18n="proj2_desc">API que simula um cliente de WhatsApp, permitindo buscar e listar
+                        mensagens e pesquisar dados de usuários. Foco em organização e busca de conteúdos dentro de
+                        conversas.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span><span>API</span><span>REST</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mthenryx/calculadora-de-media-escolar-node.js" target="_blank"
+                                rel="noopener" title="Ver código" aria-label="Ver código">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 data-i18n="proj3_title">Calculadora de Média Escolar</h3>
+                    <p data-i18n="proj3_desc">Aplicação simples em Node.js para calcular a média de notas escolares via
+                        terminal. Foco em lógica de programação e manipulação de entradas do usuário.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span><span>JavaScript</span><span>CLI</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fa-solid fa-hand-back-fist"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mthenryx/jogo-de-jokenpo" target="_blank" rel="noopener"
+                                title="Ver código" aria-label="Ver código">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 data-i18n="proj4_title">Jogo de Jokenpô</h3>
+                    <p data-i18n="proj4_desc">Jogo de pedra, papel e tesoura em Java com múltiplas rodadas contra a
+                        máquina (escolha aleatória), placar e lógica com estruturas condicionais e laços de repetição.
+                    </p>
+                    <div class="project-tags">
+                        <span>Java</span><span>Lógica</span><span>OOP</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="project-links">
+                            <a href="https://mthenryx.github.io/pikachu-layout/" target="_blank" rel="noopener"
+                                title="Demo ao vivo" aria-label="Demo ao vivo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 data-i18n="proj5_title">Pikachu Layout</h3>
+                    <p data-i18n="proj5_desc">Projeto visual dedicado ao universo Pokémon com foco no Pikachu. Design
+                        limpo e chamativo com elementos temáticos como Pokébola e imagens do personagem.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>UI Design</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTACT ===== -->
     <section class="section contact" id="contact">
         <div class="container">
@@ -369,4 +486,5 @@
         </div>
     </footer>
 </body>
+
 </html>

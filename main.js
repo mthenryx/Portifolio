@@ -94,6 +94,21 @@ const translations = {
         sk8_title: "Inglês",
         sk8_desc: "Nível intermediário e em evolução contínua pelo curso Wisard. Leitura técnica fluente.",
 
+        // Projects
+        proj_label:   "// projetos",
+        proj_title:   "O que eu construí",
+        proj_github:  "Ver GitHub",
+        proj1_title:  "Página de Conselhos",
+        proj1_desc:   "Aplicação web integrada a uma API de conselhos, com três páginas — uma estática e duas dinâmicas que consomem e exibem dados da API. Foco em integração com APIs e front-end.",
+        proj2_title:  "API WhatsApp Simulator",
+        proj2_desc:   "API que simula um cliente de WhatsApp, permitindo buscar e listar mensagens e pesquisar dados de usuários. Foco em organização e busca de conteúdos dentro de conversas.",
+        proj3_title:  "Calculadora de Média Escolar",
+        proj3_desc:   "Aplicação simples em Node.js para calcular a média de notas escolares via terminal. Foco em lógica de programação e manipulação de entradas do usuário.",
+        proj4_title:  "Jogo de Jokenpô",
+        proj4_desc:   "Jogo de pedra, papel e tesoura em Java com múltiplas rodadas contra a máquina (escolha aleatória), placar e lógica com estruturas condicionais e laços de repetição.",
+        proj5_title:  "Pikachu Layout",
+        proj5_desc:   "Projeto visual dedicado ao universo Pokémon com foco no Pikachu. Design limpo e chamativo com elementos temáticos como Pokébola e imagens do personagem.",
+
         // Contact
         contact_label: "// contato",
         contact_title: "Vamos conversar?",
@@ -113,6 +128,7 @@ const translations = {
         nav_goals: "Goals",
         nav_exp: "Experience",
         nav_skills: "Skills",
+        nav_projects:"Projects",
         nav_contact: "Contact",
 
         hero_greeting: "Hello, world",
@@ -184,6 +200,20 @@ const translations = {
         sk7_desc: "Initiative to anticipate needs, propose improvements, and act without being prompted.",
         sk8_title: "English",
         sk8_desc: "Intermediate level and continuously improving through the Wisard course. Fluent technical reading.",
+
+        proj_label:   "// projects",
+        proj_title:   "What I've built",
+        proj_github:  "View GitHub",
+        proj1_title:  "Advice Page",
+        proj1_desc:   "Web application integrated with an advice API, featuring three pages — one static and two dynamic that consume and display API data. Focus on API integration and front-end development.",
+        proj2_title:  "WhatsApp API Simulator",
+        proj2_desc:   "API that simulates a WhatsApp client, allowing fetching and listing messages and searching user data. Focus on organization and content search within conversations.",
+        proj3_title:  "School Grade Calculator",
+        proj3_desc:   "Simple Node.js application to calculate school grade averages via terminal. Focus on programming logic and user input handling.",
+        proj4_title:  "Rock Paper Scissors Game",
+        proj4_desc:   "Rock, paper, scissors game in Java with multiple rounds against the machine (random choice), scoreboard and logic using conditionals and loops.",
+        proj5_title:  "Pikachu Layout",
+        proj5_desc:   "Visual project dedicated to the Pokémon universe focusing on Pikachu. Clean and eye-catching design with thematic elements like Pokéballs and character images.",
 
         contact_label: "// contact",
         contact_title: "Let's talk?",
